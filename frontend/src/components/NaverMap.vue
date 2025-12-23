@@ -164,7 +164,7 @@ const addMarkers = async () => {
     });
 
     // 첫 번째 마커로 지도 중심 이동
-    if (locations.length > 0 && locations[0].latitude && locations[0].longitude) {
+    if (locations.length > 0 && locations[0]?.latitude && locations[0]?.longitude && window.naver?.maps) {
       map.setCenter(
         new window.naver.maps.LatLng(
           locations[0].latitude,
